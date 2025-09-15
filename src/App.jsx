@@ -57,10 +57,9 @@ export default function App() {
     open[key] && (
       <Rnd
         default={getResponsivePosition(pos.left, pos.top, 600, 500)}
-        bounds="parent"
         dragHandleClassName="window-header"
+        cancel=".close-btn"   // <- evita que la X sea draggable
         enableResizing={false}
-        style={{ position: 'initial' }}
       >
         <div className="custom-window">
           <div className="window-header">
@@ -79,6 +78,32 @@ export default function App() {
 
   return (
     <div className="desktop">
+      {/* Ventana Sobre mí */}
+      {renderWindow(
+        'about',
+        'Sobre mí',
+        <div className="about-content">
+          <Squares
+            speed={0.3}
+            squareSize={50}
+            direction="diagonal"
+            borderColor="#adadadff"
+            hoverFillColor="#222"
+          />
+          <div className="about-header">
+            <h2>&lt;Elias Steve&gt;</h2>
+            <h3>Desarrollador Web</h3>
+          </div>
+          <div className="about-main">
+            <div className="about-avatar">
+              <img src={Avatar} alt="avatar" className="avatarGif" />
+            </div>
+            <AboutInfo />
+          </div>
+        </div>,
+        { left: 450, top: 180 }
+      )}
+
       {/* Iconos de escritorio */}
       <div className="icon-column">
         <div
@@ -116,32 +141,6 @@ export default function App() {
         left: 250,
         top: 150,
       })}
-
-      {/* Ventana Sobre mí */}
-      {renderWindow(
-        'about',
-        'Sobre mí',
-        <div className="about-content">
-          <Squares
-            speed={0.3}
-            squareSize={50}
-            direction="diagonal"
-            borderColor="#adadadff"
-            hoverFillColor="#222"
-          />
-          <div className="about-header">
-            <h2>&lt;Elias Steve&gt;</h2>
-            <h3>Desarrollador Web</h3>
-          </div>
-          <div className="about-main">
-            <div className="about-avatar">
-              <img src={Avatar} alt="avatar" className="avatarGif" />
-            </div>
-            <AboutInfo />
-          </div>
-        </div>,
-        { left: 550, top: 250 }
-      )}
 
       {/* Ventana Skills */}
       {renderWindow(
@@ -191,7 +190,7 @@ export default function App() {
             </ul>
           </div>
         </div>,
-        { left: 1300, top: 50 }
+        { left: 1100, top: 50 }
       )}
 
       {/* Ventana Contacto */}
@@ -247,7 +246,7 @@ export default function App() {
             </div>
           </div>
         </div>,
-        { left: 200, top: 400 }
+        { left: 170, top: 300 }
       )}
     </div>
   )
