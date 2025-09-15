@@ -42,7 +42,7 @@ export default function App() {
   const getResponsivePosition = (left, top) => {
     if (windowSize.width < 768) {
       // móvil
-      return { x: 25, y: 100 }
+      return { x: 20, y: 100 }
     }
     if (windowSize.width < 1024) {
       // tablet 
