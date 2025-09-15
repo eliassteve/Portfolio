@@ -122,13 +122,24 @@
     }
 
     /* Contacto */
+    .contact-content {
+        height: 350px;
+    }
+
     .contact-info {
         font-size: 1rem;
+    }
+
+    .contact-avatar img {
+        width: 120px;
     }
 
     .contact-buttons {
         flex-direction: column;
         gap: 8px;
+        font-size: 0.6rem;
+        width: 70%;
+        margin: 0 auto;
     }
 
     .contact-buttons button {
