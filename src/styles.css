@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'win95';
+     src: url('./assets/fonts/W95FA.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'determination';
+    src: url(./assets/fonts/determination.ttf);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.desktop {
+    background: #008080;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.icon-column {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-family: 'win95';
+    text-shadow: 1px 1px #000000;
+    cursor: pointer;
+    width: 105px;
+    height: 90px;
+}
+
+.icon-img {
+    width: 95px; 
+    height: 60px;
+    object-fit: contain;
+}
+
+.desktop-icon:hover {
+    background-color: #ffffff4b;
+}
+
+.custom-window {
+    border: 2px solid #000;
+    box-shadow: inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff,
+                2.2px 2.2px 0 #000; 
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 1000px;
+    border-radius: 2px;
+}
+
+.window-header {
+    background: #000080; 
+    color: #fff;
+    font-family: 'win95', Arial, sans-serif;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #808080;
+}
+
+.close-btn {
+    background: #dc143c;
+    box-shadow: 1.3px 1.3px 0 #7e0b22;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 18px;
+    height: 18px;
+    display: flex; /* centrar la X */
+    align-items: center; 
+    justify-content: center; 
+}
+
+.close-btn:hover {
+    background: #a00e2b;
+}
+
+.window-content {
+    flex: 1;
+    padding: 10px;
+    background: #1d1d1d;
+    overflow-y: auto;
+}
+
+/* CONTENIDOS DE LAS VENTANAS */
+
+/* -------- SOBRE MI -------- */
+.about-content {
+    background-color: #2c2c2c;
+    width: 950px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-header h2, h3 { 
+    margin: 0; /* Evita el margen entre el contenido y el header de la ventana */
+    font-family: 'determination';
+    letter-spacing: 10px;
+}
+
+.about-header {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial;
+}
+
+.about-header h2 { 
+    font-size: 4.2rem;
+    color: #ffffff; 
+    text-shadow: 
+        2px 4px 0 #e900f1,   
+        2px 6px 0 #5f00cc;
+}
+
+.about-header h3 { 
+    font-size: 1.3rem; 
+    color: #ffffff;
+}
+
+.about-main {
+    display: flex;
+    justify-content: space-between;
+    width: 70vh;
+    margin: 70px auto;
+}
+
+.about-avatar {
+    width: 160px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.avatarGif {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    object-position: -50px;
+}
+
+.about-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-right: 30px;
+}
+
+.about-paginator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.page-btn {
+    background: #c0c0c0; 
+    border: 2px solid #000; 
+    outline: 2px solid #000; 
+    font-family: 'win95', Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff; 
+    color: #000000;
+}
+
+.page-btn:disabled {
+    background: #e0e0e0;   /* un gris más claro */
+    color: #808080;        /* texto gris apagado */
+    cursor: not-allowed;   /* cursor de desactivado */
+    box-shadow: inset -1px -1px 0 #f5f5f5, inset 1px 1px 0 #b0b0b0;
+}
+
+.about-info {
+    white-space: pre-line; /* Respetar saltos de línea con \n */
+    background-color: #ffffff; 
+    border: 2px solid #000; 
+    outline: 2px solid #fff; 
+    border-radius: 3px;
+    width: 46.3vh;
+    min-height: 70px;
+    padding: 12px;
+    color: #000;
+    font-family: 'win95', Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.4rem;
+    position: relative;
+    margin-right: 10px;
+    text-align: left;
+    box-shadow: inset -2px -2px 0 #1a1a1a, inset 2px 2px 0 #1a1a1a;
+
+    & p {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5rem;
+    }
+}
+
+/* -------- SKILLS -------- */
+.skills-window {
+  padding: 16px;
+  font-family: "win95";
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+.skills-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.skills-section {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 2px solid #464646;
+  background-color: #dcdcdc;
+}
+
+.skills-section h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+  background: #808080;
+  color: #fff;
+  padding: 2px 6px;
+}
+
+.skills-section ul {
+  list-style-type: square;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.skills-section li {
+  margin-bottom: 4px;
+}
+
+
+/* -------- CONTACTO -------- */
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 520px;
+    padding: 0 20px 10px 20px;
+}
+
+.contact-avatar {
+    height: 280px;
+    overflow: hidden;
+}
+
+.contact-avatar img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.contact-info {
+    flex-direction: column;
+    font-family: "win95";
+    color: #d5d837;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #000000;
+    text-decoration: none;
+    background-color: white;
+    padding: 2px 5px;
+    box-shadow: 0 0 0 2px black;
+    margin-left: 5px;
+}
+
+.contact-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-buttons button {
+    padding: 5px 10px;
+    font-family: "win95";
+    font-size: 1.2rem;
+    background: #c0c0c0;
+    outline: 2px solid #000; 
+    box-shadow: inset -2px -2px 0 #808080, inset 2px 2px 0 #ffffff; 
+    cursor: pointer;
+}
+
+.contact-buttons button:active {
+    box-shadow: inset 2px 2px 0 #555, inset -2px -2px 0 #fff;
+}

@@ -1,0 +1,16 @@
+.pixel-blast-container {
+  position: absolute;
+  inset: 0; /* top, right, bottom, left = 0 */
+  z-index: 0; /* fondo */
+}
+
+.contact-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info, .avatarGif {
+  position: relative;
+  z-index: 1; /* que quede por encima del fondo */
+  padding: 1rem;
+}

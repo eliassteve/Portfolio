@@ -1,0 +1,16 @@
+.squares-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0; /* fondo */
+}
+
+.about-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header, .about-main {
+  position: relative;
+  z-index: 1; /* que quede por encima del fondo */
+}
