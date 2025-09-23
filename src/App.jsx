@@ -91,8 +91,8 @@ export default function App() {
             hoverFillColor="#222"
           />
           <div className="about-header">
-            <h2>&lt;Elias Steve&gt;</h2>
-            <h3>Desarrollador Web</h3>
+            <h2>&lt;Javier Pastor&gt;</h2>
+            <h3>Desarrollador de videojuegos</h3>
           </div>
           <div className="about-main">
             <div className="about-avatar">
@@ -149,14 +149,12 @@ export default function App() {
         <div className="skills-window">
           {/* Sección 1: Programación */}
           <div className="skills-section">
-            <h3>💻 Programación & Bases de datos</h3>
+            <h3>💻 Programación</h3>
             <ul>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Java, PHP</li>
-              <li>React, Angular, Node.js</li>
-              <li>MySQL / SQL</li>
-              <li>PL/SQL (Oracle)</li>
-              <li>Linux / Máquinas virtuales</li>
+              <li>C# (Unity)</li>
+              <li>C++ (Unreal Engine)</li>
+              <li>JavaScript</li>
+              <li>Python</li>
             </ul>
           </div>
 
@@ -164,9 +162,11 @@ export default function App() {
           <div className="skills-section">
             <h3>🛠 Herramientas</h3>
             <ul>
+              <li>Unity</li>
+              <li>Unreal Engine</li>
+              <li>Git & Github</li>
+              <li>Aseprite</li>
               <li>Photoshop</li>
-              <li>Git / GitHub</li>
-              <li>VS Code</li>
             </ul>
           </div>
 
@@ -175,18 +175,16 @@ export default function App() {
             <h3>🌟 Aptitudes</h3>
             <ul>
               <li>Autosuficiencia</li>
-              <li>Buenas prácticas</li>
+              <li>Creatividad y atención al detalle</li>
               <li>Amigable</li>
-              <li>Creatividad</li>
               <li>Trabajo en equipo</li>
-              <li>Multitarea</li>
-              <li>Capacidad de enfoque</li>
               <li>Organización</li>
               <li>Gestión del tiempo</li>
               <li>Resolución de problemas</li>
               <li>Adaptabilidad</li>
               <li>Responsabilidad</li>
               <li>Paciencia</li>
+              <li>Pasión por lo retro y por aprender constantemente</li>
             </ul>
           </div>
         </div>,
@@ -221,24 +219,24 @@ export default function App() {
           <div className="contact-info">
             <p>
               <strong>Email:</strong>{' '}
-              <a>eliascontacto3@gmail.com</a>
+              <a>javipastor.dev@gmail.com</a>
             </p>
             <p>
               <strong>Teléfono:</strong>{' '}
-              <a>+34 662 47 38 39</a>
+              <a>+34 612 839 274</a>
             </p>
 
             <div className="contact-buttons">
               <button
                 onClick={() =>
-                  (window.location.href = 'mailto:eliascontacto3@gmail.com')
+                  (window.location.href = 'mailto:javipastor.dev@gmail.com')
                 }
               >
                 ✉️ Enviar correo
               </button>
               <button
                 onClick={() =>
-                  navigator.clipboard.writeText('+34662473839')
+                  navigator.clipboard.writeText('+34612839274')
                 }
               >
                 📋 Copiar número

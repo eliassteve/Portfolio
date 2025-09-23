@@ -5,8 +5,8 @@ function AboutInfo() {
     const [page, setPage] = useState(1);
 
     const pages = [
-        "👋 Bienvenido a mi espacio digital.\nAquí comparto mi pasión por el frontend y diseño web, mostrando cómo las ideas pueden transformarse en páginas web.",
-        "Mi meta es seguir creciendo como profesional, uniendo tecnología y diseño para crear proyectos innovadores que ofrezcan la mejor experiencia al usuario."
+        "👋 Bienvenido a mi espacio digital. \nMe dedico a crear videojuegos con alma retro, combinando código y arte en píxeles para dar vida a experiencias divertidas y llenas de nostalgia.",
+        "Mi objetivo es diseñar juegos accesibles y memorables, que conecten con jugadores de todas las edades y transmitan la pasión que siento por este medio."
     ];
 
     const prevPage = () => {
@@ -33,10 +33,10 @@ function AboutInfo() {
             {/* Paginador retro con flechas */}
             <div className="about-paginator">
                 <button className="page-btn" onClick={prevPage} disabled={page === 1}>
-                    🡰
+                    ◀
                 </button>
                 <button className="page-btn" onClick={nextPage} disabled={page === pages.length}>
-                    🡲
+                    ▶
                 </button>
             </div>
         </div>
